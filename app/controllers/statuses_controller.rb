@@ -66,9 +66,10 @@ class StatusesController < ApplicationController
     def set_status
       @status = Status.find(params[:id])
     end
+    
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+# Never trust parameters from the scary internet, only allow the white list through.
     def status_params
-      params.require(:status).permit(:name, :content)
-    end
+      params.require(:status).permit(:user_id, :content)
+    end 
 end
