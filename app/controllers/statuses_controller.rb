@@ -14,8 +14,9 @@ class StatusesController < ApplicationController
 
   # GET /statuses/new
   def new
-    @status = Status.new
+  @status = Status.new(user: current_user)
   end
+
 
   # GET /statuses/1/edit
   def edit
