@@ -1,6 +1,9 @@
 class ProfilesController < ApplicationController
+  before_action :set_user, only: [:show]
+  
   def show
-    if user
+    if @user
+      @statuses = Status.all
       render action: :show
     else
       render file: "public/404", status: 404, formats: [:html]
@@ -9,19 +12,13 @@ class ProfilesController < ApplicationController
 
   private
 
-  def user
-    @user = User.where(profile_name: params[:profile_name]).limit(1).first
-  end
-
-  def statuses
-    user.statuses
-  end
-
-  helper_method :user, :statuses
+   def set_user
+    @user = User.where(profile_name: params[:profile_name]).first
+   end
 end
+   
 
-def full_name
-    first_name + " " + last_name
-end
+
+
 
 

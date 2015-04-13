@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
 
  devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
@@ -10,9 +11,7 @@ Rails.application.routes.draw do
   get "feed", to: "statuses#index", as: :feed
   root to: "statuses#index"
   
-  get ":profile_name", to: "profiles#show"
-  
-  
+  get '/:profile_name', to: 'profiles#show', as: :profile
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,12 +1,9 @@
 <div class ="page-header">
     <h1><%= @user.full_name %></h1>
 </div>
-<div class ="page-header">
-    <h1><%= user.full_name %></h1>
-</div>
 
-<% if statuses.any? %>
-  <% statuses.each do |status| %>
+<% if @user.statuses.any? %>
+  <% @user.statuses.each do |status| %>
     <div class="well">
       <% status.content %>
       <hr />
@@ -14,11 +11,4 @@
     </div>
   <% end %>
 <% end %>
-    <% @statuses.each do |status| %>
-           <div class="well">
-            <% status.content %>
-            <hr />
-            <%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago
-        </div>
-        <% end %>
-   
+ 
