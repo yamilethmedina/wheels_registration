@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   
   def show
     if @user
-      @statuses = Status.all
+      @statuses = @user.statuses.all
       render action: :show
     else
       render file: "public/404", status: 404, formats: [:html]
