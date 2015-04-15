@@ -11,10 +11,10 @@
 <div class="navbar navbar-fixed-top">
   <div class ="navbar-inner">
     <div class="container">
-      <a href="#" class="brand">WHEELS Registration</a>
+      <b><a href="#" class="brand">WHEELS Registration</a></b>
       <ul class ="nav">
-        <li><%= link_to "All Statuses", feed_path %>
-              </li>
+        <%= link_to "All Statuses", feed_path %> |
+        <%= link_to "All Events", events_path %>
       </ul>
       <ul class="nav pull-right">
         <% if user_signed_in? %>
