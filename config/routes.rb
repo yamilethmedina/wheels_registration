@@ -1,6 +1,34 @@
 Rails.application.routes.draw do
   
 
+  get 'participation/index'
+
+  get 'participation/show'
+
+  get 'participation/create'
+
+  get 'participation/edit'
+
+  get 'participation/update'
+
+  get 'participation/new'
+
+  get 'participation/destroy'
+
+  get 'events/index'
+
+  get 'events/show'
+
+  get 'events/create'
+
+  get 'events/edit'
+
+  get 'events/update'
+
+  get 'events/new'
+
+  get 'events/destroy'
+
  devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
      get "register", to: "devise/registrations#new", as: :register
