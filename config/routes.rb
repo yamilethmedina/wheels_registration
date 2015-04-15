@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "events", to: "events#index", as: :events
   get "new_event", to: "events#new", as: :new_event
   get "create_event", to: "events#create", as: :create_event
+  get "edit_event", to: "events#edit", as: :edit_event
   get "update_event", to: "events#update", as: :update_event
   get "delete_event", to: "events#destroy", as: :delete_event
   

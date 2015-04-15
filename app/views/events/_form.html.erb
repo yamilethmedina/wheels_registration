@@ -1,7 +1,4 @@
 
-<%= simple_form_for @event do |f| %>
- <%= f.collection_check_boxes :options, [[biking, 'Biking'] ,[running, 'Running']], [hiking, 'Hiking']], [[comm_event, 'Community Events']], [[ecga_summit, 'ECGA Summit']], :first, :last %>
-<% end %>
 
 
 <%= simple_form_for (@event, html: {class: "form-horizontal"})  do |f| %>
