@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :statuses
+  has_many :events, through: :participation
 
   validates_presence_of :first_name, :last_name
 

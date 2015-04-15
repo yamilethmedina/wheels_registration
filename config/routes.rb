@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   
 
+  
+  get "events", to: "events#index", as: :events
+  get "new_event", to: "events#new", as: :new_event
+  get "create_event", to: "events#create", as: :create_event
+  get "update_event", to: "events#update", as: :update_event
+  get "delete_event", to: "events#destroy", as: :delete_event
+  
+  get "participation", to: "participation#index", as: :participation
+  get "new_participation", to: "participation#new", as: :new_participation
+  get "show_participation", to: "participation#show", as: :show_participation
+  get "participate", to: "participation#create", as: :participate
+  get "update_participation", to: "participation#update", as: :update_participation
+  get "delete_participation", to: "participation#destroy", as: :delete_participation
+  
   get 'participation/index'
 
   get 'participation/show'
