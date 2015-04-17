@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20150415215651) do
 
   create_table "events", force: true do |t|
     t.string "event_name"
+    t.text   "location"
     t.date   "event_date"
     t.time   "event_time"
     t.text   "description"
@@ -39,18 +40,52 @@ ActiveRecord::Schema.define(version: 20150415215651) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "profile_name"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                     default: "",    null: false
+    t.string   "encrypted_password",        default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",             default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "nov11underlinecommute",     default: false
+    t.boolean  "fiuride",                   default: false
+    t.boolean  "brickellbikein",            default: false
+    t.boolean  "nov12underlinecommute",     default: false
+    t.boolean  "ecgwelcomeride",            default: false
+    t.boolean  "emergetwilightride",        default: false
+    t.boolean  "thursfootworksrun",         default: false
+    t.boolean  "thursbrickellrun",          default: false
+    t.boolean  "kirkmunroereception",       default: false
+    t.boolean  "nov13underlinecommute",     default: false
+    t.boolean  "ecgaloop",                  default: false
+    t.boolean  "friconference",             default: false
+    t.boolean  "homesteadbikein",           default: false
+    t.boolean  "ecgareception",             default: false
+    t.boolean  "miamibikescene",            default: false
+    t.boolean  "evergladesbikeclub1",       default: false
+    t.boolean  "ludlamtrailrun",            default: false
+    t.boolean  "satfootworksrun",           default: false
+    t.boolean  "satconference",             default: false
+    t.boolean  "emerge2ndsat",              default: false
+    t.boolean  "scouttroopride",            default: false
+    t.boolean  "ecgamembershipsummit",      default: false
+    t.boolean  "gravelgrindersludlam",      default: false
+    t.boolean  "southmiamibikein",          default: false
+    t.boolean  "ebckirkmunroeride",         default: false
+    t.boolean  "trilocokirkmunroeride",     default: false
+    t.boolean  "stormriderskirkmunroeride", default: false
+    t.boolean  "bikegrovekirkmunroeride",   default: false
+    t.boolean  "kirkmunroehonors",          default: false
+    t.boolean  "bwcgcgmride",               default: false
+    t.boolean  "ciclovia",                  default: false
+    t.boolean  "kidicalmass",               default: false
+    t.boolean  "upghike",                   default: false
+    t.boolean  "ecgaboardmeeting",          default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
