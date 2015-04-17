@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
   
-
-  
-  get "events", to: "events#index", as: :events
-  get "new_event", to: "events#new", as: :new_event
-  get "create_event", to: "events#create", as: :create_event
-  get "edit_event", to: "events#edit", as: :edit_event
-  get "update_event", to: "events#update", as: :update_event
-  get "delete_event", to: "events#destroy", as: :delete_event
+  resources :events
   
   get "participation", to: "participation#index", as: :participation
   get "new_participation", to: "participation#new", as: :new_participation
@@ -30,20 +23,6 @@ Rails.application.routes.draw do
 
   get 'participation/destroy'
 
-  get 'events/index'
-
-  get 'events/show'
-
-  get 'events/create'
-
-  get 'events/edit'
-
-  get 'events/update'
-
-  get 'events/new'
-
-  get 'events/destroy'
-
  devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
      get "register", to: "devise/registrations#new", as: :register
@@ -55,6 +34,7 @@ Rails.application.routes.draw do
   root to: "statuses#index"
   
   get '/:profile_name', to: 'profiles#show', as: :profile
+  get '/:new_event' => 'events#new'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
