@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   root to: "statuses#index"
   
   get '/:profile_name', to: 'profiles#show', as: :profile
-  get '/:new_event' => 'events#new'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
