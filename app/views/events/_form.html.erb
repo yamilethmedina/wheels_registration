@@ -1,14 +1,15 @@
 <%= simple_form_for (@event)  do |f| %>
-<div class="form-inputs">
-  <%= f.input :event_name, as: :string %>
-  <%= f.input :location, as: :text %>
-  <%= f.input :event_date, as: :date %>
-  <%= f.input :event_time, as: :time %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :category, as: :text %>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.input :event_name, as: :string %>
+    <%= f.input :location, as: :text %>
+    <%= f.input :event_date, as: :date %>
+    <%= f.input :event_time, as: :time %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :category, as: :text %>
+   
   </div>
   
   <div class="form-actions">
-  <%= f.button :submit %>
+    <%= f.button :submit %>
   </div>
+ <% end %>
