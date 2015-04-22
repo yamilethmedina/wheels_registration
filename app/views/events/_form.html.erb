@@ -2,7 +2,7 @@
   <div class="form-inputs">
     <%= f.input :event_name, as: :string %>
     <%= f.input :location, as: :text %>
-    <%= f.input :event_date_time, as: 'datetime', :order =>[:month, :date, :year, :hour, :minute], :ampm => true %>
+    <%= f.input :event_date_time, as: 'datetime', :ampm => true %>
     <%= f.input :description, as: :text %>
     <%= f.input :category, as: :text %>
    
