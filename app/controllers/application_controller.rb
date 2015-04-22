@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected 
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :profile_name << :event_name << :location << :event_date << :event_time << :description << :category
-    devise_parameter_sanitizer.for(:account_update) << :first_name << :last_name << :profile_name << :event_name << :location << :event_date << :event_time << :description << :category
+    devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :profile_name << :event_name << :location << :event_date_time << :description << :category
+    devise_parameter_sanitizer.for(:account_update) << :first_name << :last_name << :profile_name << :event_name << :location << :event_date_time << :description << :category
   end
 end

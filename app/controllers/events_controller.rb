@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
     def event_params
-      params.require(:event).permit(:event_name, :location, :description, :event_date, :event_time, :category) if params[:event]
+      params.require(:event).permit(:event_name, :location, :description, :event_date_time, :category) if params[:event]
     end 
 
   def index
