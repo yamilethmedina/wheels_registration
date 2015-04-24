@@ -20,4 +20,3 @@
 //= require pickers
 
 // You may include any languages (optional)
-//= require moment/<your locale>

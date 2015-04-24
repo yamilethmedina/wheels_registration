@@ -10,7 +10,7 @@
       <%= link_to link_name, event %>
           <span class="admin">| <%= link_to "Edit", edit_event_path(event) %> |
         <% message = "Are you sure you want to delete this event?" %>
-        <%= link_to "Delete", event, method: :destroy, data: { confirm: message} %>
+        <%= link_to "Delete", event, method: :delete, data: { confirm: message} %>
       </span>
     </div>
   </div>
