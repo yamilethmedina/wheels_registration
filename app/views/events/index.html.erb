@@ -7,7 +7,7 @@
     <%= event.event_date_time.strftime("%A %D at %I:%M %p") %></p>
     <div class="meta">
         <% link_name = "Sign up!" %>
-      <%= link_to link_name, event %>
+      <%= link_to New, new_participation_path(event) %>
           <span class="admin">| <%= link_to "Edit", edit_event_path(event) %> |
         <% message = "Are you sure you want to delete this event?" %>
         <%= link_to "Delete", event, method: :delete, data: { confirm: message} %>

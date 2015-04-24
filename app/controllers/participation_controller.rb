@@ -15,6 +15,7 @@ class ParticipationController < ApplicationController
   end
 
   def new
+     @participation = Participation.new
   end
 
   def destroy
