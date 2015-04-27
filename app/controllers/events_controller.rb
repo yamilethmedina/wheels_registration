@@ -46,7 +46,24 @@ class EventsController < ApplicationController
     end
   end
 
-
+ def join
+   
+   unless user_signed_in?
+      render plain: event.errors.messages
+      return
+   end
+   
+    @event = Event.find(params[:id])
+    
+    participation = Participation.new(event: @event, user: current_user)
+    
+      if participation.save
+        redirect_to @event, notice: "Thanks for joining this event! See you there!"
+        
+      else
+         render file: "public/404", status: 404, formats: [:html]
+      end
+ end
 
   
   

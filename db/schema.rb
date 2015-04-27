@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415215651) do
+ActiveRecord::Schema.define(version: 20150427200652) do
 
   create_table "events", force: true do |t|
     t.string   "event_name"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20150415215651) do
     t.boolean  "kidicalmass",               default: false
     t.boolean  "upghike",                   default: false
     t.boolean  "ecgaboardmeeting",          default: false
+    t.boolean  "admin",                     default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

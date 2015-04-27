@@ -15,6 +15,11 @@ class ProfilesController < ApplicationController
    def set_user
     @user = User.where(profile_name: params[:profile_name]).first
    end
+   
+   def grant_current_user_admin_rights
+     current_user.update_attribute :admin, true
+   end
+   
 end
    
 

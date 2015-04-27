@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :events
+      get "events/join/:id", to: "events#join", as: "join"
   
   devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
