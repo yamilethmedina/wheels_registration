@@ -11,7 +11,8 @@ Rails.application.routes.draw do
    end
    resources :statuses
   get "feed", to: "statuses#index", as: :feed
-  root to: "statuses#index"
+  
+  root to: "events#index"
   
   get '/:profile_name', to: 'profiles#show', as: :profile
   
