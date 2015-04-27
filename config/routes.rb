@@ -2,28 +2,7 @@ Rails.application.routes.draw do
   
   resources :events
   
-  get "participation", to: "participation#index", as: :participation
-  get "new_participation", to: "participation#new", as: :new_participation
-  get "show_participation", to: "participation#show", as: :show_participation
-  get "participate", to: "participation#create", as: :participate
-  get "update_participation", to: "participation#update", as: :update_participation
-  get "delete_participation", to: "participation#destroy", as: :delete_participation
-  
-  get 'participation/index'
-
-  get 'participation/show'
-
-  get 'participation/create'
-
-  get 'participation/edit'
-
-  get 'participation/update'
-
-  get 'participation/new'
-
-  get 'participation/destroy'
-
- devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
      get "register", to: "devise/registrations#new", as: :register
      get "login", to: "devise/sessions#new", as: :login
