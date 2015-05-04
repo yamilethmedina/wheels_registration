@@ -5816,6 +5816,17 @@ button.close {
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
+
+.email { 
+  margin-right: 28px; 
+}
+ 
+
+.password { 
+  margin-right: 10px; 
+}
+ 
+
 .modal-scrollbar-measure {
   position: absolute;
   top: -9999px;

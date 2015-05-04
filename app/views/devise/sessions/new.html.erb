@@ -5,8 +5,8 @@
 
 <fieldset>
   <legend>Log in</legend>
-<%= f.input :email %>
-<%= f.input :password %>
+<%= f.input :email, label: 'Email' %>
+<%= f.input :password, label: 'Password' %>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
