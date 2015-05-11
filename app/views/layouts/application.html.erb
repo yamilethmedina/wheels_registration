@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>WHEELS 2015 Event Registration</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
    <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
   <div class ="navbar-inner">
     <div class="container">
+      <div class="pull-left">
       <b><a href="#" class="brand">WHEELS Registration</a></b>
       <ul class ="nav">
-        <%= link_to "All Statuses", feed_path %> |
-        <%= link_to "All Events", events_path %>
+       <%= link_to "All Events", events_path %>
       </ul>
+      </div>
       <ul class="nav pull-right">
         <% if user_signed_in? %>
         <li><%= link_to current_user.full_name, edit_user_registration_path %></li>

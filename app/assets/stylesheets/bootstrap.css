@@ -63,6 +63,7 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  color: #78b81b;
 }
 mark {
   color: #000;
@@ -1582,6 +1583,11 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.container h1 {
+    color: #78b81b;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -1631,6 +1637,7 @@ pre code {
 }
 .col-xs-8 {
   width: 66.66666667%;
+  color: #78b81b;
 }
 .col-xs-7 {
   width: 58.33333333%;
@@ -1643,6 +1650,7 @@ pre code {
 }
 .col-xs-4 {
   width: 33.33333333%;
+  color: #006fc0;
 }
 .col-xs-3 {
   width: 25%;
@@ -2497,7 +2505,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333;
+  color: #006fc0 ;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -4126,7 +4134,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
-  }
+    }
 }
 .container > .navbar-header,
 .container-fluid > .navbar-header,
@@ -4924,6 +4932,7 @@ a.thumbnail.active {
 .alert {
   padding: 15px;
   margin-bottom: 20px;
+  margin-top: 30px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
