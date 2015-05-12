@@ -27,3 +27,10 @@
   <strong>Category:</strong>
   <%= @event.category %>
 </p>
+
+  <div class="meta">
+ <% if user_signed_in? %>
+            <%= link_to "Join", join_path %> |
+            <%= link_to 'Back', events_path %>
+      <% end %>
+ </div>
