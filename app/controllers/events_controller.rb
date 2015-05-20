@@ -10,6 +10,7 @@ class EventsController < ApplicationController
 
   def show
      @event = Event.find(params[:id])
+     @participating = @event.participating?(current_user)
   end
   
   def new
@@ -64,7 +65,7 @@ class EventsController < ApplicationController
          render file: "public/404", status: 404, formats: [:html]
       end
  end
+ 
 
-  
   
 end

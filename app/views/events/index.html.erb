@@ -5,12 +5,12 @@
     <strong> <%= event.event_name %>  </strong>
     <p><%= event.location %> <br>
     <%= event.event_date_time.strftime("%A %D at %I:%M %p") %></p>
-    <div class="meta">
-        <% link_name = "Join" %>
-          <% if user_signed_in? %>
-            <%= link_to "Join", join_path(event) %> |
-            <%= link_to "Show", event_path(event) %>
-          <% end %>
+   <% if user_signed_in? %>
+  <% unless event.participating?(current_user) %>
+    <%= link_to "Join", join_path(event) %> |
+  <% end %>
+  <%= link_to "Show", event %>
+<% end %>
           <% if current_user.try(:admin?) %>
           <span class="admin"> | <%= link_to "Edit", edit_event_path(event) %> |
         <% message = "Are you sure you want to delete this event?" %>
