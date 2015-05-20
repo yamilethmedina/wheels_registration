@@ -34,8 +34,8 @@
 </p>
 
   <div class="meta">
-    <%= link_to 'Back', events_path %>
+    <%= link_to 'Back', events_path %> |
  <% if user_signed_in? and not @participating %>
-            <%= link_to "Join", join_path %> |
+            <%= link_to "Join", join_path %> 
             <% end %>
  </div>
