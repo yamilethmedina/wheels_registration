@@ -32,6 +32,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+  
+  <div class="field">
+    <%= f.label :mdtpass, 'Would you like a free round-trip Miami-Dade Transit pass while supplies last (expires Dec. 31, 2015)?' %><br />
+    <%= f.check_box :mdtpass %>
+  </div>
 
 </div>
  
@@ -41,3 +46,4 @@
 
 
 </div>
+

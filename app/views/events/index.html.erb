@@ -15,8 +15,9 @@
           <span class="admin"> | <%= link_to "Edit", edit_event_path(event) %> |
         <% message = "Are you sure you want to delete this event?" %>
         <%= link_to "Delete", event, method: :delete, data: { confirm: message} %>
+         </span>
         <% end %>
-      </span>
+     
     </div>
   
 <% end %>
