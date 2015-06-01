@@ -1,6 +1,6 @@
 
 <div class="row">
-<div class="col-xs-6">
+<div class="container-fluid">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "well"}) do |f| %>
 
 <fieldset>
@@ -24,7 +24,10 @@
 <%= render "devise/shared/links" %>
 </div>
 
-<div class="col-xs-6">
+<!-- Add the extra clearfix for only the required viewport -->
+  <div class="clearfix visible-xs"></div>
+
+<div class="container-fluid">
    <center><h2>Signing in is easy and secure</h2>
  <img src="http://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/54ecfc98e4b0cc380c7af39a/1429903823657/?format=300w" /></center>
 </div>
