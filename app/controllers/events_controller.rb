@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
     def event_params
-      params.require(:event).permit(:event_name, :location, :description, :event_date_time, :category) if params[:event]
+      params.require(:event).permit(:event_name, :location, :description, :event_date_time, :organizer, :category) if params[:event]
     end 
 
   def index
@@ -36,6 +36,12 @@ class EventsController < ApplicationController
   end
 
   def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      # Handle a successful update.
+    else
+      render 'update'
+    end
   end
 
   def destroy
