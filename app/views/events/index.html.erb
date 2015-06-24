@@ -9,7 +9,10 @@
   <% unless event.participating?(current_user) %>
     <%= link_to "Join", join_path(event) %> |
   <% end %>
-  <%= link_to "Show", event %>
+  <% if event.participating?(current_user) %>
+  <%= link_to "Cancel", cancel_path(event) %> |
+  <% end %>
+  <%= link_to "Description", event %>
 <% end %>
           <% if current_user.try(:admin?) %>
           <span class="admin"> | <%= link_to "Edit", edit_event_path(event) %> |
