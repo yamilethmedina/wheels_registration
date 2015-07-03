@@ -9,7 +9,8 @@ class EventsController < ApplicationController
   end
 
   def show
-     @events = current_user.events
+     @event = Event.find(params[:id])
+     @participating = @event.participating?(current_user)
   end
   
   def new
