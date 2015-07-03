@@ -9,8 +9,7 @@ class EventsController < ApplicationController
   end
 
   def show
-     @event = Event.find(params[:id])
-     @participating = @event.participating?(current_user)
+     @events = current_user.events
   end
   
   def new
@@ -33,6 +32,10 @@ class EventsController < ApplicationController
   
   def edit
     @event = Event.find(params[:id])
+  end
+  
+  def myevents
+    @events = current_user.events
   end
 
   def update

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :statuses
   has_many :participations
-  has_many :events, through: :participation
+  has_many :events, through: :participations
 
   validates_presence_of :first_name, :last_name
 

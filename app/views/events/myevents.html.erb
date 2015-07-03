@@ -1,0 +1,9 @@
+<h1>My WHEELS 2015 Events</h1>
+
+<% @events.each do |event| %>
+  <%= event.event_name %>
+<% end %>
+
+ <div class="meta">
+    <%= link_to 'Back', events_path %> 
+ </div>
