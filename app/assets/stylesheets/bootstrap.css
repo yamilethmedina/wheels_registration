@@ -190,6 +190,7 @@ th {
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
 @media print {
   *,
   *:before,
@@ -265,6 +266,11 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+
+.event {
+  padding-bottom: 25px;
+  }
+
 @font-face {
   font-family: 'Glyphicons Halflings';
 
@@ -2808,7 +2814,7 @@ select[multiple].form-group-lg .form-control {
   line-height: 30px;
 }
 .has-success .help-block,
-.has-success .control-label,
+event.has-success .control-label,
 .has-success .radio,
 .has-success .checkbox,
 .has-success .radio-inline,

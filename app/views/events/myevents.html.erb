@@ -1,17 +1,18 @@
 <h1>My WHEELS 2015 Events</h1>
 
 <% @events.each do |event| %>
-  <div class="event">
-  <strong><%= event.event_name %></strong>
-  <p><%= event.location %> <br>
-    <%= event.event_date_time.strftime("%A %D at %I:%M %p") %></p>
+ <p> <div class="event">
+  <strong><%= event.event_name %></strong><br>
+  <%= event.location %> <br>
+    <%= event.event_date_time.strftime("%A %D at %I:%M %p") %><br>
    <% if user_signed_in? %>
     <% if event.participating?(current_user) %>
      <%= link_to "Cancel", cancel_path(event) %> |
      <% end %>
     <%= link_to "Description", event %>
    <% end %>
- <% end %><br><br><br>
+ <% end %>
+ <br><br><br></p>
 
  <div class="meta">
     <%= link_to 'Back', events_path %> 

@@ -2,9 +2,9 @@
 
 <% @events.each do |event| %>
   <div class="event">
-    <strong> <%= event.event_name %>  </strong>
-    <p><%= event.location %> <br>
-    <%= event.event_date_time.strftime("%A %D at %I:%M %p") %></p>
+    <strong> <%= event.event_name %>  </strong><br>
+    <%= event.location %> <br>
+    <%= event.event_date_time.strftime("%A %D at %I:%M %p") %><br>
    <% if user_signed_in? %>
   <% unless event.participating?(current_user) %>
     <%= link_to "Join", join_path(event) %> |
