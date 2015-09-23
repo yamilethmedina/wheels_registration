@@ -4207,6 +4207,7 @@ height:28px;
 }
 .navbar-brand > img {
   display: block;
+  
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -6622,3 +6623,11 @@ button.close {
     padding-top: 25px;
   }
 
+ #div.container {
+   /* background: url("header"); */
+ }
+ 
+ .col-centered{
+    float: none;
+    margin: 0 auto;
+}
