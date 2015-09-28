@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get "events/join/:id", to: "events#join", as: "join"
       get "events/cancel/:id", to: "participations#destroy", as: "cancel"
       get "myevents", to: "events#myevents"
+      get "events/delete/:id", to: "events#destroy", as: "delete"
   
   devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   root to: "events#index"
   
   get '/:profile_name', to: 'profiles#show', as: :profile
+  
+  
   
 
   # The priority is based upon order of creation: first created -> highest priority.

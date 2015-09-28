@@ -10,28 +10,54 @@
 <body>
 
 <div class="navbar">
-  <div class ="navbar-inner">
+  <div class="navbar-inner">
     <div class="container">
       <div class="pull-left">
         <div class="brand">
+          <!--<div class="brand logopic">-->
           <img src="https://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/54ecfc98e4b0cc380c7af39a/1435162899623/" height="200px" width="200px">
+        </div>
+        </div>
+        <!--<div class="center-block">-->
+     
+        <img src="http://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/5602e062e4b0d28c8246fa6d/1443029092179/?format=750w" class="img-responsive">
         
-        <img src="http://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/5602e062e4b0d28c8246fa6d/1443029092179/?format=750w">
+        
         <!--<img src="http://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/5602d859e4b01dadee150da1/1443027034844/?format=750w">-->
-     </div>
-      </div>
-      <ul class="nav pull-right">
+    <!--</div>-->
+    </div>
+    </div>
+    
+    </div>
+    
+      <div class="navigation pull-right">
+        <div class="btn-group-vertical pull-right" role="group" aria-label="...">
+
+
+      <!--<ul class="nav pull-right">-->
         <% if user_signed_in? %>
-        <li><%= link_to current_user.full_name, edit_user_registration_path %></li>
-        <li><%= link_to "My Events", myevents_path %></li>
-        <li><%= link_to "Log Out", logout_path %></li>
+         <button type="button" class="btn btn-default"><%= link_to current_user.full_name, edit_user_registration_path %></button>
+        <button type="button" class="btn btn-default"><%= link_to "My Events", myevents_path %></button>
+         <button type="button" class="btn btn-default"><%= link_to "Log Out", logout_path %></button>
         <% else %>
-          <li><%= link_to "Register", register_path %></li>
-          <li><%= link_to "Log in", login_path %></li>
+           <button type="button" class="btn btn-default"><%= link_to "Register", register_path %></button>
+           <button type="button" class="btn btn-default"><%= link_to "Log in", login_path %></button>
         <% end %>
-      </ul>
+      <!--</ul>-->
       </div>
       </div>
+      </div>
+      
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="text">
+      Register Now. Win free prizes. Get a free fitted helmet and rail pass while supplies last. Ensure your seat at WHEELS conference sessions.
+    </div>
+    </div>
+    
+     
     </div>
 <div class="container">
   <% flash.each do |type, message| %>
