@@ -6623,29 +6623,29 @@ button.close {
     padding-top: 25px;
   }
 
- #div.container {
+/* #div.container {*/
    /* background: url("header"); */
- }
+/* }*/
  
- .col-centered{
-    float: none;
-    margin: 0 auto;
-}
+/* .col-centered{*/
+/*    float: none;*/
+/*    margin: 0 auto;*/
+/*}*/
 
-.header-image {
+/*.header-image {*/
   /*width: 100%;*/
-  text-align: center;
+/*  text-align: center;*/
   /*float: none;*/
-  display: inline-block;
-  padding-left: 25px;
-  padding-right: 25px;
-}
+/*  display: inline-block;*/
+/*  padding-left: 25px;*/
+/*  padding-right: 25px;*/
+/*}*/
 
-.center-block {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
+/*.center-block {*/
+/*  display: inline-block;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*}*/
 
 .text {
   display: inline-block;
@@ -6655,7 +6655,7 @@ button.close {
 
 .navigation {
   padding-right: 25px;
-  display: inline-block;
+  /*display: inline-block;*/
   clear: none;
   margin-left: auto;
   margin-right: auto;
