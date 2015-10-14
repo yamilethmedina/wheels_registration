@@ -31,6 +31,7 @@
         <% if user_signed_in? %>
          <button type="button" class="btn btn-default"><%= link_to current_user.full_name, edit_user_registration_path %></button>
         <button type="button" class="btn btn-default"><%= link_to "My Events", myevents_path %></button>
+        <button type="button" class="btn btn-default"><%= link_to "Tri-Rail Cyclist Passport", "https://static1.squarespace.com/static/54adc070e4b0c8f53bde4cf9/t/561ea7a4e4b0956834f2b111/1444849572002/WHEELS_TriRail+Cyclist+Passport.jpg", :target => "_blank" %></button>
          <button type="button" class="btn btn-default"><%= link_to "Log Out", logout_path %></button>
         <% else %>
            <button type="button" class="btn btn-default"><%= link_to "Register", register_path %></button>
