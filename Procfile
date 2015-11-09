@@ -1,1 +1,1 @@
-web: bundle exec rails s -b $IP -p $PORT
+web: bundle exec rails s
