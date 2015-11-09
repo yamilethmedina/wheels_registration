@@ -1,0 +1,41 @@
+<h1>Events at WHEELS 2015</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event Name:</strong>
+ <%= @event.event_name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Date and Time:</strong>
+  <%= @event.event_date_time.strftime("%A %D at %I:%M %p") %>
+</p>
+
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Organizer:</strong>
+  <%= @event.organizer %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @event.category %>
+</p>
+
+  <div class="meta">
+    <%= link_to 'Back', events_path %> |
+ <% if user_signed_in? and not @participating %>
+            <%= link_to "Join", join_path %> 
+            <% end %>
+ </div>

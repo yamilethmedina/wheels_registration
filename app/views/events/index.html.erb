@@ -5,6 +5,7 @@
     <strong> <%= event.event_name %>  </strong><br>
     <%= event.location %> <br>
     <%= event.event_date_time.strftime("%A %D at %I:%M %p") %><br>
+    
    <% if user_signed_in? %>
   <% unless event.participating?(current_user) %>
     <%= link_to "Join", join_path(event) %> |
@@ -12,16 +13,18 @@
   <% if event.participating?(current_user) %>
   <%= link_to "Cancel", cancel_path(event) %> |
   <% end %>
-  <%= link_to "Description", event %>
-<% end %>
+ 
+ 
           <% if current_user.try(:admin?) %>
           <span class="admin"> | <%= link_to "Edit", edit_event_path(event) %> |
         <% message = "Are you sure you want to delete this event?" %>
         <%= link_to "Delete", event, method: :delete, data: { confirm: message} %>
          </span>
         <% end %>
-     
+         <% end %>
+      <%= link_to "Description", event %>
+<% end %>
     </div>
   
-<% end %>
+
 
