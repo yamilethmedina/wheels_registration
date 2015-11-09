@@ -76,14 +76,32 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  config.action_mailer.delivery_method = :sendmail
+  #config.action_mailer.delivery_method = :sendmail
 # Defaults to:
 # config.action_mailer.sendmail_settings = {
 #   location: '/usr/sbin/sendmail',
 #   arguments: '-i -t'
 # }
+# config.action_mailer.perform_deliveries = true
+# config.action_mailer.raise_delivery_errors = true
+
+config.action_mailer.default_url_options = { :host => 'wheels2015.herokuapp.com' }
+Rails.application.routes.default_url_options[:host] = 'wheels2015.herokuapp.com'
+
+config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
-config.action_mailer.raise_delivery_errors = true
-config.action_mailer.default_options = {from: 'no-reply@wheelsflorida.org'}
-config.action_mailer.default_url_options = { :host => "http://wheels2015.herokuapp.com" }
+config.action_mailer.raise_delivery_errors = false
+config.action_mailer.default :charset => "utf-8"
+
+config.action_mailer.smtp_settings = {
+address: "smtp.zohi.com",
+port: 465,
+domain: ENV["ZOHO_DOMAIN"],
+authentication: "plain",
+enable_starttls_auto: true,
+user_name: ENV["ZOHO_USERNAME"],
+password: ENV["ZOHO_PASSWORD"]
+}
+# config.action_mailer.default_options = {from: 'no-reply@wheelsflorida.org'}
+# config.action_mailer.default_url_options = { :host => "http://wheels2015.herokuapp.com" }
 end
